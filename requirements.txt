@@ -3,3 +3,4 @@ Flask_Cors
 numpy
 opencv_python
 gunicorn
+subprocess

@@ -2,6 +2,10 @@ import cv2
 import numpy as np
 from flask_cors import CORS
 from flask import Flask, request, jsonify
+from face_id_functions import add_face, run_identification
+
+
+
 
 app = Flask(__name__)
 CORS(app)
@@ -26,6 +30,22 @@ def upload_image():
     image = cv2.imdecode(np.frombuffer(image_file.read(), np.uint8), cv2.IMREAD_UNCHANGED)
     cv2.imwrite('./uploaded_image.jpg', image)
     return {'message': 'Image uploaded successfully'}
+
+
+
+@app.route('/api/face-identification', methods=['POST'])
+def face_identification():
+    image_file = request.files['image']
+    image = cv2.imdecode(np.frombuffer(image_file.read(), np.uint8), cv2.IMREAD_UNCHANGED)
+    face_name = run_identification(image)
+    
+    return {'name': f'{face_name}'}
+
+
+
+
+
+
 
 if __name__ == '__main__':
     app.run(debug=True)
