@@ -6,6 +6,9 @@ from flask import Flask, request, jsonify
 app = Flask(__name__)
 CORS(app)
 
+@app.route('/test/')
+def test() :
+    return '!!!! test flask app !!!!'
 
 @app.route('/add_hello', methods=['POST'])
 def add_hello():
