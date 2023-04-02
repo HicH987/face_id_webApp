@@ -22,8 +22,9 @@ known_face_names = list(loaded_data["names"])
 known_face_encodings = list(loaded_data["encodings"])
 
 
-def add_face(frame, face_name):
-    face_encoding = face_recognition.face_encodings(frame)[0]
+def add_face(face_name):
+    current_image = cv2.imread('current_face.jpg')
+    face_encoding = face_recognition.face_encodings(current_image)[0]
     known_face_names.append(face_name)
     known_face_encodings.append(np.array(face_encoding))
     np.savez_compressed(
@@ -34,6 +35,8 @@ def add_face(frame, face_name):
 
 
 def run_identification(frame):
+    cv2.imwrite('current_face.jpg', frame)
+    
     small_frame = cv2.resize(frame, (0, 0), fx=0.25, fy=0.25)
     rgb_small_frame = cv2.cvtColor(small_frame, cv2.COLOR_BGR2RGB)
 
@@ -49,7 +52,3 @@ def run_identification(frame):
         return known_face_names[best_match_index]
     
     return "Unknown_face"
-
-    # if face_name == "Unknown":
-    #     face_name = get_face_name()
-    #     add_face(frame,face_name)

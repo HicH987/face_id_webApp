@@ -4,9 +4,6 @@ from flask_cors import CORS
 from flask import Flask, request, jsonify
 from face_id_functions import add_face, run_identification
 
-
-
-
 app = Flask(__name__)
 CORS(app)
 
@@ -32,7 +29,6 @@ def upload_image():
     return {'message': 'Image uploaded successfully'}
 
 
-
 @app.route('/api/face-identification', methods=['POST'])
 def face_identification():
     image_file = request.files['image']
@@ -42,7 +38,15 @@ def face_identification():
     return {'name': f'{face_name}'}
 
 
-
+@app.route('/api/add-face-name', methods=['POST'])
+def add_face_name():
+    data = request.get_json()
+    text_input = data['textInput']
+    
+    add_face(text_input)
+    
+    response = {'message': f'The face was named: {text_input}'}
+    return jsonify(response)
 
 
 
