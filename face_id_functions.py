@@ -1,20 +1,21 @@
 import cv2
 import numpy as np
 
-try:
-    import face_recognition
-except:
-    import subprocess
+import face_recognition
+# try:
+#     import face_recognition
+# except:
+#     import subprocess
 
-    subprocess.check_call(
-        [
-            "pip",
-            "install",
-            "cmake",
-            "https://github.com/jloh02/dlib/releases/download/v19.22/dlib-19.22.99-cp310-cp310-win_amd64.whl",
-            "face-recognition",
-        ]
-    )
+#     subprocess.check_call(
+#         [
+#             "pip",
+#             "install",
+#             "cmake",
+#             "https://github.com/jloh02/dlib/releases/download/v19.22/dlib-19.22.99-cp310-cp310-win_amd64.whl",
+#             "face-recognition",
+#         ]
+#     )
 
 data_path = "face_data.npz"
 loaded_data = np.load(data_path)
