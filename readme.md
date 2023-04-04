@@ -14,7 +14,7 @@ This is a Flask API for face identification, capable of recognizing known faces 
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/your-username/face_id_flask_api.git
+   git clone https://github.com/HicH987/face_id_flask_api.git
    cd face_id_flask_api
    ```
 
@@ -92,7 +92,7 @@ To add a name to an unknown face:
 curl -X POST -H "Content-Type: application/json" -d '{"textInput": "Name of the person"}' http://localhost:5000/api/add-face-name
 ```
 
-If you are familiar with react js here is a simple app that use this api [link](https://github.com/HicH987/react_app_face_id_api_test)
+#### Importent: If you are familiar with react js here is a simple app that use this api [here](https://github.com/HicH987/react_app_face_id_api_test)
 
 ## Additional Information
 
