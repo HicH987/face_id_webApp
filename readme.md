@@ -31,9 +31,7 @@ To start the server, run the following command:
 ```bash
 flask run
 ```
-
 or
-
 ```bash
 python app.py
 ```
@@ -42,57 +40,57 @@ python app.py
 
 The API provides the following endpoints:
 
-#### `POST /api/face-identification`
+#### 1. `POST /api/face-identification`
 
-This endpoint receives a face image and searches the known faces data to determine if the face is known. If the face is known, the endpoint returns the name of the person associated with the face. If the face is unknown, the endpoint returns `"Unknown_face"`.
+   This endpoint receives a face image and searches the known faces data to determine if the face is known. If the face is known, the endpoint returns the name of the person associated with the face. If the face is unknown, the endpoint returns `"Unknown_face"`.
 
-##### Request
+- ##### Request
 
-The request should contain a `multipart/form-data` file with the key `"image"`.
+   The request should contain a `multipart/form-data` file with the key `"image"`.
 
-##### Response
+- ##### Response
 
-If the face is known, the response is a JSON object containing the `"name"` of the person associated with the face.
+   If the face is known, the response is a JSON object containing the `"name"` of the person associated with the face.
 
-If the face is unknown, the response is a JSON object containing `"Unknown_face"`.
+   If the face is unknown, the response is a JSON object containing `"Unknown_face"`.
 
-#### `POST /api/add-face-name`
+#### 2. `POST /api/add-face-name`
 
 This endpoint receives a name to associate with an unknown face and adds it to the known faces data.
 
-##### Request
+- ##### Request
 
-The request should contain a JSON object with the following structure:
+   The request should contain a JSON object with the following structure:
 
-```json
-{
-  "textInput": "Name of the person"
-}
-```
+   ```json
+   {
+   "textInput": "Name of the person"
+   }
+   ```
 
-##### Response
+- ##### Response
 
-The response is a JSON object containing a `"message"` indicating that the face was named with the given name.
+   The response is a JSON object containing a `"message"` indicating that the face was named with the given name.
 
-#### `GET /test/`
+- #### `GET /test/`
 
-This endpoint returns a simple message indicating that the Flask app is working.
+   This endpoint returns a simple message indicating that the Flask app is working.
 
-### Example
+   ### Example
 
-Here's an example of how to use the API endpoints using `curl`.
+   Here's an example of how to use the API endpoints using `curl`.
 
-To recognize a face:
+   To recognize a face:
 
-```bash
-curl -X POST -F "image=@path/to/image.jpg" http://localhost:5000/api/face-identification
-```
+   ```bash
+   curl -X POST -F "image=@path/to/image.jpg" http://localhost:5000/api/face-identification
+   ```
 
-To add a name to an unknown face:
+   To add a name to an unknown face:
 
-```bash
-curl -X POST -H "Content-Type: application/json" -d '{"textInput": "Name of the person"}' http://localhost:5000/api/add-face-name
-```
+   ```bash
+   curl -X POST -H "Content-Type: application/json" -d '{"textInput": "Name of the person"}' http://localhost:5000/api/add-face-name
+   ```
 
 ## Additional Information
 
