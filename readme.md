@@ -4,8 +4,13 @@
 
 This is a Flask API for face identification, capable of recognizing known faces and associating them with names. The API is written in Python 3.10.7 and uses OpenCV for face recognition.
 
+## Prerequire
+- [Python](https://www.python.org/downloads/) 
+- pip (Python package installer) it come with python
+
+
 ## Installation
-0. `Optional` install Python from this [link](https://www.python.org/downloads/)
+
 1. Clone the repository:
 
    ```bash
