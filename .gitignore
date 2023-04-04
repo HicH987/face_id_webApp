@@ -1,3 +1,4 @@
 /__pycache__
+/utils/__pycache__
 face_data - un.npz
-current_face.jpg
+data/current_face.jpg
