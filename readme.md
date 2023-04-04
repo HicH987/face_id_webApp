@@ -76,21 +76,23 @@ This endpoint receives a name to associate with an unknown face and adds it to t
 
    This endpoint returns a simple message indicating that the Flask app is working.
 
-   ### Example
+### Example
 
-   Here's an example of how to use the API endpoints using `curl`.
+Here's an example of how to use the API endpoints using `curl`.
 
-   To recognize a face:
+To recognize a face:
 
-   ```bash
-   curl -X POST -F "image=@path/to/image.jpg" http://localhost:5000/api/face-identification
-   ```
+```bash
+curl -X POST -F "image=@path/to/image.jpg" http://localhost:5000/api/face-identification
+```
 
-   To add a name to an unknown face:
+To add a name to an unknown face:
 
-   ```bash
-   curl -X POST -H "Content-Type: application/json" -d '{"textInput": "Name of the person"}' http://localhost:5000/api/add-face-name
-   ```
+```bash
+curl -X POST -H "Content-Type: application/json" -d '{"textInput": "Name of the person"}' http://localhost:5000/api/add-face-name
+```
+
+If you are familiar with react js here is a simple app that use this api [link](https://github.com/HicH987/react_app_face_id_api_test)
 
 ## Additional Information
 
