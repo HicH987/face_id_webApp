@@ -29,11 +29,18 @@ This is a Flask API for face identification, capable of recognizing known faces 
 To start the server, run the following command:
 
 ```bash
-flask run
-```
-or
-```bash
 python app.py
+```
+### Alternative commend
+set the debug mode 1
+
+```bash
+ export FLASK_DEBUG=1 # on bash (git bash or linux terminal)
+ set FLASK_DEBUG=1 # on cmd or powershell 
+```
+then run the server
+```bash
+flask run
 ```
 
 ### API Endpoints
