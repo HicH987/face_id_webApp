@@ -31,17 +31,7 @@ To start the server, run the following command:
 ```bash
 python app.py
 ```
-### Alternative commend
-set the debug mode 1
 
-```bash
- export FLASK_DEBUG=1 # on bash (git bash or linux terminal)
- set FLASK_DEBUG=1 # on cmd or powershell 
-```
-then run the server
-```bash
-flask run
-```
 ### API Endpoints
 
 The API provides the following endpoints:
@@ -98,7 +88,6 @@ To add a name to an unknown face:
 curl -X POST -H "Content-Type: application/json" -d '{"textInput": "Name of the person"}' http://localhost:5000/api/add-face-name
 ```
 
-#### Importent: If you are familiar with react js here is a simple app that use this api [here](https://github.com/HicH987/react_app_face_id_api_test)
 
 ## Additional Information
 
@@ -106,6 +95,12 @@ This API was created using the following packages:
 
 - Flask (v2.2.3)
 - Flask-Cors (v3.0.10)
+
+### Importent: 
+- If you are familiar with react js here is a simple app that use this api [here](https://github.com/HicH987/react_app_face_id_api_test)
+
+- Deploy the api on colab 
+
 
 For more information on how to use Flask, please refer to the official Flask documentation: https://flask.palletsprojects.com/.
 
