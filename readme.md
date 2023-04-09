@@ -42,7 +42,6 @@ then run the server
 ```bash
 flask run
 ```
-
 ### API Endpoints
 
 The API provides the following endpoints:
