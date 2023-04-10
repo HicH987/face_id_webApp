@@ -42,6 +42,7 @@ def add_face_name():
 
 parser = argparse.ArgumentParser()
 parser.add_argument('--url', help='ACCESS LINK', default=None)
+parser.add_argument('--port', help='PORT NUM', default=None)
 
 args = parser.parse_args()
 
@@ -50,5 +51,5 @@ if __name__ == "__main__":
         for rule in list(app.url_map.iter_rules())[1:]:
                 print(str(args.url)+str(rule))
         print('\n')
-        
-    app.run(debug=True)
+    
+    app.run(debug=True, port=args.port)
