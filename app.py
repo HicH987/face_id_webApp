@@ -47,8 +47,8 @@ args = parser.parse_args()
 
 if __name__ == "__main__":
     if args.url:
-        print('\n')
         for rule in list(app.url_map.iter_rules())[1:]:
                 print(str(args.url)+str(rule))
         print('\n')
+        
     app.run(debug=True)
