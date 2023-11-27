@@ -16,10 +16,9 @@ Before starting, make sure you have the following installed:
 To get started, clone this repository and install the dependencies:
 
 ```bash
-git clone https://github.com/HicH987/react_app_face_id_api_test.git
-cd react_app_face_id_api_test
-
-npm install
+    git clone https://github.com/HicH987/face_id_webApp.git
+    cd face_id_webApp/Frontend
+    npm install
 ```
 
 
