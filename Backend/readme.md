@@ -99,7 +99,7 @@ This API was created using the following packages:
 ### Importent: 
 - If you are familiar with react js here is a simple app that use this api [here](https://github.com/HicH987/react_app_face_id_api_test)
 
-- Deploy the api on <a href="https://colab.research.google.com/github/HicH987/face_id_webApp.git/blob/master/Backend/%23%20deployment_colab.ipynb"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"></a>
+- Deploy the api on <a href="https://colab.research.google.com/github/HicH987/face_id_webApp/blob/master/Backend/_deployment_colab.ipynb"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"></a>
 
 
 For more information on how to use Flask, please refer to the official Flask documentation: https://flask.palletsprojects.com/.

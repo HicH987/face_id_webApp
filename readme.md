@@ -80,4 +80,4 @@ curl -X POST -H "Content-Type: application/json" -d '{"textInput": "Name of the 
 ```
 
 
-Deploy the API on [Google Colab](https://colab.research.google.com/github/HicH987/face_id_flask_api/blob/master/%23%20deployment_colab.ipynb).
+Deploy the API on [Google Colab](https://colab.research.google.com/github/HicH987/face_id_webApp/blob/master/Backend/_deployment_colab.ipynb).
